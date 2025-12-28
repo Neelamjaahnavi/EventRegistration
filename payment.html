@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Payment - Tech Symposium</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Internal CSS for specific layout */
+        .payment-box {
+            border: 2px solid #2c3e50;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: #f9f9f9;
+        }
+        .option-group {
+            text-align: left;
+            margin: 20px 0;
+        }
+        .option-group label {
+            display: block;
+            padding: 10px;
+            border: 1px solid #ccc;
+            margin-bottom: 5px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .option-group input {
+            width: auto;
+            display: inline;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="form-container payment-box">
+            <h2>Select Payment Method</h2>
+            <p>Total Amount: <strong>$10.00</strong></p>
+            
+            <form action="#">
+                <div class="option-group">
+                    <label><input type="radio" name="pay" value="upi"> UPI (Google Pay / PhonePe)</label>
+                    <label><input type="radio" name="pay" value="card"> Credit / Debit Card</label>
+                    <label><input type="radio" name="pay" value="net"> Net Banking</label>
+                    <label><input type="radio" name="pay" value="wallet"> Digital Wallet</label>
+                </div>
+                
+                <button type="button" class="btn-payment" onclick="alert('Payment Successful!')">Pay Now</button>
+            </form>
+        </div>
+        <br>
+        <a href="index.html">← Back to Home</a>
+    </div>
+</body>
+</html>

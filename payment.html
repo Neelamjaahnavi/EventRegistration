@@ -2,53 +2,61 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Payment - Tech Symposium</title>
+    <title>Secure Payment</title>
     <link rel="stylesheet" href="style.css">
     <style>
-        .payment-box {
-            border: 2px solid #2c3e50;
-            padding: 20px;
-            border-radius: 10px;
-            background-color: #f9f9f9;
+        .back-home-container {
+            text-align: center;
+            margin-top: 30px;
         }
-        .option-group {
-            text-align: left;
-            margin: 20px 0;
+
+        .btn-secondary {
+            display: inline-block;
+            color: #666;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 10px 20px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            transition: all 0.3s ease;
         }
-        .option-group label {
-            display: block;
-            padding: 10px;
-            border: 1px solid #ccc;
-            margin-bottom: 5px;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        .option-group input {
-            width: auto;
-            display: inline;
-            margin-right: 10px;
+
+        .btn-secondary:hover {
+            background-color: #eee;
+            color: #333;
+            transform: translateY(-2px);
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="form-container payment-box">
-            <h2>Select Payment Method</h2>
-            <p>Total Amount: <strong>Rs.500.00</strong></p>
-            
-            <form action="#">
-                <div class="option-group">
-                    <label><input type="radio" name="pay" value="upi"> UPI (Google Pay / PhonePe)</label>
-                    <label><input type="radio" name="pay" value="card"> Credit / Debit Card</label>
-                    <label><input type="radio" name="pay" value="net"> Net Banking</label>
-                    <label><input type="radio" name="pay" value="wallet"> Digital Wallet</label>
-                </div>
-                
-                <button type="button" class="btn-payment" onclick="alert('Payment Successful!')">Pay Now</button>
-            </form>
+    <div class="form-container">
+        <h2 style="margin-top:0;">Payment Summary</h2>
+        <div style="background: #eef2f7; padding: 15px; border-radius: 8px; margin-bottom: 20px;">
+            <p>Registration Fee: <strong>$10.00</strong></p>
         </div>
-        <br>
-        <a href="index.html">← Back to Home</a>
+
+        <form>
+            <label style="display:block; margin-bottom:10px;">Select Method:</label>
+            <select style="width:100%; padding:10px; margin-bottom:20px; border-radius:5px; border: 1px solid #ddd;">
+                <option>UPI (Google Pay / PhonePe)</option>
+                <option>Credit Card / Debit Card</option>
+                <option>PayPal</option>
+                <option>Net Banking</option>
+            </select>
+
+            <button type="button" class="btn-payment" onclick="alert('Success! Registration Confirmed.')">Complete Payment</button>
+        </form>
+
+        <div class="payment-icons">
+            <img src="https://cdn-icons-png.flaticon.com/512/196/196070.png" alt="Visa" style="height: 30px; opacity: 0.6;">
+            <img src="https://cdn-icons-png.flaticon.com/512/196/196066.png" alt="PayPal" style="height: 30px; opacity: 0.6;">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/e/e1/UPI-Logo-vector.svg" alt="UPI" style="height: 30px; opacity: 0.6;">
+        </div>
     </div>
+
+    <div class="back-home-container">
+        <a href="index.html" class="btn-secondary">← Back to Home Page</a>
+    </div>
+
 </body>
 </html>

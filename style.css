@@ -19,7 +19,7 @@ body {
 
 /* --- Typography & Headings --- */
 h1, h2 {
-    color: #2c3e50; /* Fixed color code */
+    color: #FA; /* Fixed color code */
     text-align: center;
 }
 
@@ -88,7 +88,7 @@ h1, h2 {
 }
 
 .event-list li::before {
-    content: "🚀 ";
+    content: ">> ";
     margin-right: 10px;
 }
 
